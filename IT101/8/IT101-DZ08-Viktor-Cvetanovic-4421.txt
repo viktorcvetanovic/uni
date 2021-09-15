@@ -1,0 +1,101 @@
+PITANJE BROJ 1
+
+	let brIndeksa = 4421;
+
+	for (var i = 1; i < brIndeksa; i++) {
+	}
+	petlja ce se izvrsiti 4420 puta i vrednost brojaca bice 4421
+
+	while (true) {
+	}
+	ovo je beskonacna petlja
+
+    for (var i = brIndeksa; i >= 1; i--) {
+    }
+	
+	 da nema while petlje iznad petlja bi se izvrsila 4421 puta a vrednost brojaca bi bila 1 na kraju petlje
+
+PITANJE BROJ 2
+	let brIndeksa = 4421;
+
+	for (i = 1; i < brIndeksa; i += 20) {
+	}
+	vrednost brojaca posle trece iteracije je 41 a vrednost brojaca posle poslednje iteracije je 4420
+
+PITANJE BROJ 3
+
+
+	let i = 10;
+	do { console.log(i); i--; } while (i > 1)
+	petlja ce se izvrsiti 9 puta
+-------------------------------------------------------------------------------------------------------------------
+
+ZADATAK 1
+var niz = [10, 64, 11, 12, 99, 9, 3, 7, 1, 61, 89, 76, 6, 94];
+for (let i = 0; i < niz.length; i++) {
+    if (niz[i] < 70) {
+        console.log(niz[i]);
+    }
+}
+
+ZADATAK 2
+const array=[];
+for (let i = 0; i < 1000; i++) {
+    if (i % 3 === 0 && i % 10 !== 0) {
+        array.push(i);
+    }
+}
+console.log(array);
+
+ZADATAK 3
+function isPrime(broj) {
+    for (let i = 2; i <= Math.sqrt(broj); i++) {
+        if (broj % i == 0) return false;
+    }
+    return true;
+}
+function checkPrimes(broj) {
+    for (let i = 2; i < broj; i++) {
+        if (isPrime(i)) console.log(i, 'je prost');
+    }
+}
+checkPrimes(350);
+
+ZADATAK 4
+var a = 0;
+var b = 1;
+var c = 1;
+document.write(a + " ");
+document.write(b + " ");
+for (let i = 0; i < 8; i++) {
+    c = a + b;
+    a = b;
+    b = c;
+    document.write(c + " ");
+}
+
+ZADATAK 5
+let niz = [4, 2, 1, 5, 6, 7, 3, 10, 12, 9, 22, 15, 13, 31, 11];
+console.log(niz)
+let max1 = niz[0];
+let max2 = niz[1];
+let max3 = niz[2];
+for (let i = 0; i < niz.length; i++) {
+    if (niz[i] > max1) {
+        max2 = max1;
+        max1 = niz[i];
+        // console.log(max1);
+    } else if (niz[i] > max2) {
+        max3 = max2;
+        max2 = niz[i];
+        console.log(max2);
+    } else if (niz[i] > max3) {
+        max3 = niz[i];
+        // console.log(max3);
+    }
+}
+document.write(max1 + " " + max2 + " " + max3);
+
+
+
+

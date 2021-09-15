@@ -1,0 +1,41 @@
+danica-prvo
+2000,TECHNO
+70
+Preview
+LOSvikttor-nis
+1967,TECHNO
+50
+FULL
+SREDNJImilena-noc
+1999,RAP
+90
+Preview
+DOBARdragan-dan
+2000,ROCK
+100
+FULL
+LOSpetar-kralj
+2001,POP
+120
+FULL
+LOSnikola-ne znam
+1940,POP
+60
+200.0
+KRIPTOVALUTAnikola-ne znam
+1940,ROCK
+60
+240.0
+PAYPALnikola-ne znam
+1940,TECHNO
+60
+270.0
+KARTICAnikola-ne znam
+1940,RAP
+60
+300.0
+PAYPALnikola-ne znam
+1940,TECHNO
+60
+400.0
+KARTICA

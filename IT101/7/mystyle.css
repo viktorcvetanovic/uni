@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+  
+}
+*{
+    text-align: center;
+}
+.list-group-item-action:hover{
+    background-color: lightgrey !important;
+    cursor:  pointer !important;
+    
+}
+.list-group-flush{
+    margin-left: 0% !important;
+    padding-left:0% !important;
+}
+
+.link{
+    
+text-decoration: none !important;
+
+}
+.color1{
+    color:rgb(167, 66, 66) !important;
+}
+.color2{
+    color:rgb(143, 201, 221) !important;
+}
+.container{
+    margin-top:4rem !important;
+}
+.row{
+    margin-top:3rem !important;
+}
+.ulglavna{
+    list-style: none;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+.liglavna{
+    font-style: italic !important;
+
+}

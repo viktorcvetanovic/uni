@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="IT210-DZ07-ViktorCvetanovic4421.xsl"?>
+
+<studenti>
+    <student>
+        <ime>Peta</ime>
+        <prezime>Marinkovic</prezime>
+        <starost>21</starost> 
+        <ocena>7</ocena>
+        <sifra_predmeta>IT210</sifra_predmeta>
+    </student>
+
+     <student>
+        <ime>Mirko</ime>
+        <prezime>Rasic</prezime>
+        <starost>25</starost> 
+        <ocena>8</ocena>
+        <sifra_predmeta>MA101</sifra_predmeta>
+    </student>
+
+     <student>
+        <ime>Nikola</ime>
+        <prezime>Simic</prezime>
+        <starost>24</starost> 
+        <ocena>10</ocena>
+        <sifra_predmeta>IT210</sifra_predmeta>
+    </student>
+
+     <student>
+        <ime>Marina</ime>
+        <prezime>Milutinovic</prezime>
+        <starost>27</starost> 
+        <ocena>5</ocena>
+        <sifra_predmeta>CS102</sifra_predmeta>
+    </student>
+
+     <student>
+        <ime>Milunka</ime>
+        <prezime>Milanovic</prezime>
+        <starost>32</starost> 
+        <ocena>5</ocena>
+        <sifra_predmeta>IT210</sifra_predmeta>
+    </student>
+
+     
+</studenti>

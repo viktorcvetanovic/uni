@@ -1,0 +1,36 @@
+*{ 
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important ;
+    color: white;
+}
+
+.ime{
+    background-color:#1e3658;   
+}
+
+.photo img{
+    padding-bottom: 3rem !important; 
+}
+
+.lead{
+    margin-left: 1rem !important;
+}
+
+.forms{
+    min-height: 40vh !important;
+    background-color:#1e3658 !important;
+    max-width: 80vw;
+    margin: 0 auto !important;
+}
+
+.firstdiv{
+    padding-top: 2rem !important; 
+}
+
+.form-control{
+    max-width: 50% !important;
+    margin: 0 auto !important;
+}
+ 
+ 
