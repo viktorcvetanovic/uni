@@ -1,0 +1,29 @@
+body {
+    background-image: url("assets/back.jpg");
+    background-color: #cccccc;
+    background-position: center;
+}
+p{color: #000000;}
+
+.navigation{
+    width: 200px;
+    height: 100px;
+    background-color: #cccccc;
+    text-align:  center;
+}
+
+.navigation a{
+    color: #000000;
+    display: block;
+}
+.show_t{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #cccccc;
+    width: 50%;
+    min-height: 500px;
+}
+
+.container_for_new input,select{
+    margin-top: 1rem;
+}
