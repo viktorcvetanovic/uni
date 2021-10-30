@@ -1,0 +1,4 @@
+1.Sve računare (PC ili laptop) čija je cena manja od 1100
+π maker (σ type=PC∨type=laptop (Product)) χ π PC (σ price<1000 (π speed (PC) ∪ π speed (Laptop)))
+2.Broj brodova potopljenih u borbi za Danski tesnac (Denmark strait)
+2-potopljena(sunk)
