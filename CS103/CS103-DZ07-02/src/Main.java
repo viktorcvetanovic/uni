@@ -12,5 +12,6 @@ public class Main {
         binaryTree.print(System.out);
         System.out.println("-----Biggest element------");
         System.out.println("The values is: "+binaryTree.findBiggestEl());
+        System.out.println(binaryTree.toList());
     }
 }

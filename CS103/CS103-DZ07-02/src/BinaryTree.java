@@ -1,4 +1,6 @@
 import java.io.PrintStream;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class BinaryTree {
     private Node root;
@@ -29,6 +31,20 @@ public class BinaryTree {
         return el;
     }
 
+    public List<Node> toList() {
+        return getList(root, new ArrayList<>());
+    }
+
+    private List<Node> getList(Node node, List<Node> list) {
+        if (node == null) {
+            return null;
+        }
+        getList(node.left, list);
+        list.add(node);
+        getList(node.right, list);
+        return list;
+    }
+
 
     public void print(PrintStream os) {
         StringBuilder sb = new StringBuilder();
@@ -56,8 +72,7 @@ public class BinaryTree {
     }
 
 
-    private static final class Node {
-
+    private static final class Node implements Comparable<Node>{
         private Node left;
         private Node right;
         private Integer value;
@@ -75,6 +90,11 @@ public class BinaryTree {
         @Override
         public String toString() {
             return String.valueOf(value);
+        }
+
+        @Override
+        public int compareTo(Node o) {
+            return value.compareTo(o.value);
         }
     }
 }
