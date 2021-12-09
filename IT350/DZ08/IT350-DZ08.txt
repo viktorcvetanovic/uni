@@ -1,0 +1,98 @@
+CREATE DATABASE it350dz08;
+
+CREATE TABLE Zaposleni (
+id INT NOT NULL AUTO INCREMENT,
+    Ime VARCHAR(16) NOT NULL,
+    Prezime VARCHAR(16) NOT NULL,
+    JMBG VARCHAR(16) NOT NULL,
+    adresa VARCHAR(32) NOT NULL,
+    telefon INT NOT NULL,
+	fk_odeljenje_ime VARCHAR
+    );
+
+CREATE TABLE Korisnik (
+id INT NOT NULL AUTO INCREMENT,
+    Ime VARCHAR(16) NOT NULL,
+    Prezime VARCHAR(16) NOT NULL,
+    JMBG VARCHAR(16) NOT NULL,
+    adresa VARCHAR(32) NOT NULL,
+    telefon INT NOT NULL
+    );
+	
+CREATE TABLE Odeljenje (
+id INT NOT NULL AUTO INCREMENT,
+    Ime VARCHAR(16) NOT NULL,
+    Mesto VARCHAR(16) NOT NULL
+    );
+
+CREATE TABLE Knjiga (
+id INT NOT NULL AUTO INCREMENT,
+    Naziv VARCHAR(32) NOT NULL,
+    Opis VARCHAR(256) NOT NULL,
+	Slika BINARY NOT NULL
+    );
+	
+CREATE TABLE Autor (
+id INT NOT NULL AUTO INCREMENT,
+    Ime VARCHAR(16) NOT NULL,
+    Prezime VARCHAR(16) NOT NULL,
+    JMBG VARCHAR(16) NOT NULL,
+    adresa VARCHAR(32) NOT NULL,
+    telefon INT NOT NULL
+    );
+	
+CREATE TABLE Iznajmljivanje (
+id INT NOT NULL AUTO INCREMENT,
+    datum_izd DATE NOT NULL,
+	fk_korisnik_ime VARCHAR,
+	fk_zaposleni_ime,
+	fk_knjiga_naziv
+    );
+
+CREATE TABLE ProizvodnaTabela(
+id INT NOT NULL AUTO INCREMENT,
+fk_autor INT,
+fk_zaposleni INT,
+ADD CONSTRAINT FK_Autor_Proba FOREIGN KEY (fk_autor) REFERENCES autor(id),
+ADD CONSTRAINT FK_Zaposleni_Proba FOREIGN KEY (fk_zaposleni) REFERENCES zaposleni(id),
+)
+
+ALTER TABLE autor
+ADD UNIQUE (JMBG);
+
+ALTER TABLE autor
+ADD UNIQUE (telefon);
+
+ALTER TABLE iznajmljivanje
+ADD CONSTRAINT FK_KorisnikIme FOREIGN KEY (fk_korisnik_ime) REFERENCES korisnik(Ime);
+
+ALTER TABLE iznajmljivanje
+ADD CONSTRAINT FK_ZaposleniIme FOREIGN KEY (fk_zaposleni_ime) REFERENCES zaposleni(Ime);
+
+ALTER TABLE iznajmljivanje
+ADD CONSTRAINT FK_KnjigaNaziv FOREIGN KEY (fk_knjiga_naziv) REFERENCES knjiga(Naziv);
+
+ALTER TABLE Knjiga DROP COLUMN Slika;
+
+ALTER TABLE zaposleni
+ADD CONSTRAINT FK_Zaposleni_Odeljenje FOREIGN KEY (fk_odeljenje_ime) REFERENCES odeljenje(Ime);
+
+INSERT INTO Zaposleni(ime,prezime,jmbg,adresa,telefon)
+ VALUES
+ ('Onako','Proba','21412412412','Pantelej','4242');
+
+INSERT INTO Korisnik(ime,prezime,jmbg,adresa,telefon)
+ VALUES
+ ('Onako','Proba','21412412412','Pantelej','4242');
+
+INSERT INTO Odeljenje(ime,mesto)
+ VALUES
+ ('FSAFASFA','Nis');
+
+INSERT INTO Knjiga(Naziv,Opis,Slika)
+ VALUES
+ ('FSAFASFA','fsfsfs',10101010101010);
+
+INSERT INTO Autor(ime,prezime,jmbg,adresa,telefon)
+ VALUES
+ ('Onako','Proba','21412412412','Pantelej','4242');
