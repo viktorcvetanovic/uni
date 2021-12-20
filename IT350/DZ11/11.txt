@@ -1,0 +1,30 @@
+
+use studentska;
+
+alter table student add pol char not null default 'N';
+
+describe student;
+
+alter table student drop pol;
+
+--------------------------------
+alter table smer drop smer_naziv;
+
+describe smer;
+-------------------------------
+use studentska;
+set autocommit = 0;
+
+
+
+start transaction;
+select * from overa where ocena = 5;
+update overa set ocena = null where ocena = 5;
+commit;
+
+start transaction;
+update overa set ocena = 5 where ocena IS NULL;
+select * from overa where ocena IS NULL;
+commit;
+
+set autocommit = 1;

@@ -1,0 +1,5 @@
+SELECT p.naziv,AVG(o.ocena) FROM predmet p
+JOIN overa o ON o.predmet_id=p.predmet_id
+JOIN student s ON o.indeks=s.indeks
+WHERE o.ocena>5
+GROUP BY p.predmet_id

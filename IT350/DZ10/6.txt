@@ -1,0 +1,4 @@
+select s.*,AVG(o.ocena) from student s
+join overa o on o.indeks=s.indeks
+where o.ocena>5
+GROUP BY s.indeks

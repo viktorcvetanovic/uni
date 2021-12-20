@@ -1,0 +1,8 @@
+Napisati upit koji izračunava najveću i prosečnu ocenu po svakoj školskoj godini, po
+svakom ispitnom roku i svakom predmetu
+
+select max(ocena),avg(ocena) from overa 
+GROUP BY godina_roka,predmet_id,oznaka_roka;
+
+
+

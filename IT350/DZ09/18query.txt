@@ -1,0 +1,1 @@
+select indeks,ime,prezime,tip_studiranja from student where indeks<1500;
