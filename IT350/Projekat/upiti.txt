@@ -1,0 +1,41 @@
+# SQL upiti
+
+# 1.
+select *
+from company c
+         join ad a on c.company_id = a.company_fk
+where a.work_type = 'JUNIOR';
+
+# 2.
+select i.*,
+       c.*
+from interview i
+         join ad_candidate ac on i.interview_id = ac.interview_fk
+         join candidate c on c.candidate_id = ac.candidate_fk
+where ac.date like '2020-05-%';
+
+# 3.
+select max(ad_id)
+from ad
+         join company c on c.company_id = ad.company_fk
+group by ad_id
+having max(ad_id) >= 2;
+
+# 4.
+select c.*,
+       c2.value
+from candidate c
+         join person p on p.person_id = c.person_fk
+         join contact c2 on c2.contact_id = p.contact_fk
+where c2.contact_type = 'ADDRESS'
+order by p.date_of_birth;
+
+# 5. sediste Srbija fali negde nekako
+
+# 6.
+select c.name,
+       count(c2.contact_id)
+from company c
+         join contact c2 on c.company_id = c2.company_fk
+where c2.contact_type = 'MOBILE_PHONE'
+group by c.name;
