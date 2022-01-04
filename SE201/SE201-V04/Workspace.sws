@@ -5,6 +5,7 @@
 <Workspace>
 	<Local Expanded="Yes">
 		<Model Expanded="Yes" ID="{C824AE32-90F1-4043-9267-6A630C98B403}" Name="SE201PROJEKAT" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="../SE201-PROJEKAT/SE201-PROJEKAT.prj"/>
+		<Model ID="{4869B368-27E7-4D0E-8FC6-229CBDF74DB4}" Loaded="No" Name="SE201-Projekat" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="file:///C|/Users/vikto/OneDrive/Desktop/SE201-Projekat-Boban/SE201-Projekat-Boban.prj"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
