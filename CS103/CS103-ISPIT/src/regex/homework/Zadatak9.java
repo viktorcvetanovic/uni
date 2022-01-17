@@ -1,12 +1,13 @@
-package regex;
+package regex.homework;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Zadatak3 {
+public class Zadatak9 {
+
     public static void main(String[] args) {
-        Pattern pattern = Pattern.compile("(CS|IT|SE)([1-9]\\d{2}|1000)\\b");
-        Matcher matcher = pattern.matcher("CS111 SE202 SE222 IT323232");
+        Pattern pattern = Pattern.compile("(var|const|let)\\s[a-zA-Z0-9]=");
+        Matcher matcher = pattern.matcher("var a=     var c=");
         String s = "";
         while (matcher.find()) {
             s += " " + matcher.group(0);
