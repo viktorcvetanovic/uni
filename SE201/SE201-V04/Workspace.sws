@@ -5,8 +5,9 @@
 <Workspace>
 	<Local Expanded="Yes">
 		<Model Expanded="Yes" ID="{C824AE32-90F1-4043-9267-6A630C98B403}" Loaded="No" Name="SE201PROJEKAT" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="../SE201-PROJEKAT/SE201-PROJEKAT.prj"/>
-		<Model Expanded="Yes" ID="{4869B368-27E7-4D0E-8FC6-229CBDF74DB4}" Loaded="No" Name="SE201-Projekat" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="file:///C|/Users/vikto/OneDrive/Desktop/SE201-Projekat-Boban/SE201-Projekat-Boban.prj"/>
-		<Model Expanded="Yes" ID="{1BFBF5FD-9326-445D-BCB7-642E2A2ED3A3}" Name="SE201-JunB" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="/uni/IT350/Projekat/SE201-JunB/SE201-JunB.prj"/>
+		<Model ID="{4869B368-27E7-4D0E-8FC6-229CBDF74DB4}" Name="SE201-Projekat" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="file:///C|/Users/vikto/OneDrive/Desktop/SE201-Projekat-Boban/SE201-Projekat-Boban.prj"/>
+		<Model Expanded="Yes" ID="{1BFBF5FD-9326-445D-BCB7-642E2A2ED3A3}" Loaded="No" Name="SE201-JunB" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="/uni/IT350/Projekat/SE201-JunB/SE201-JunB.prj"/>
+		<Model Expanded="Yes" ID="{C824AE32-90F1-4043-9267-6A630C98B403}" Name="SE201PROJEKAT" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="../SE201-PROJEKAT/SE201-PROJEKAT.prj"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
