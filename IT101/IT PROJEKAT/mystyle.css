@@ -138,7 +138,7 @@ footer{
 .h2align{
     text-align: center;
 }
-.audi100IMG {
+.responsive_image {
     border: 1px solid #ddd;
     border-radius: 3px;
     padding: 5px;
@@ -160,7 +160,7 @@ footer{
 
 .backgroundIMG{
     max-width: 70vw;
-  
+    min-width: 70vw;
 }
 .people img{
     display: block;
@@ -196,6 +196,7 @@ footer{
 .map{
     margin-top: 5rem !important;
 }
+
 
 
 @keyframes show{
@@ -273,13 +274,12 @@ footer{
     }
 
     .photos img{
-        max-height: 150px;
-        max-width: 360px;
+        margin: 0 auto;
         display: block;
-        margin-left:auto;
-        margin-right: auto;
-    
     }
+
+
+
     .borderShow{
         max-width: 90vw !important;
         max-height:70vh !important;
@@ -394,6 +394,7 @@ footer{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .products{
+    margin: 0 auto;
     padding-bottom: 10rem;
 }
 .buyButton:hover{
@@ -436,5 +437,10 @@ footer{
     margin-top: 5rem;
 }
 .prikazCene p{
+    text-align: center;
+}
+
+.photos{
+    margin: 0 auto;
     text-align: center;
 }
