@@ -4,7 +4,7 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{C824AE32-90F1-4043-9267-6A630C98B403}" Name="SE201PROJEKAT" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="../SE201-PROJEKAT/SE201-PROJEKAT.prj"/>
+		<Model Expanded="Yes" ID="{B1BE057F-6167-4E01-AD1B-54972F475FA4}" Name="Ispit2020" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="../JanuarA2020/Ispit2020/Ispit2020.prj"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
