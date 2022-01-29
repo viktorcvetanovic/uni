@@ -1,8 +1,8 @@
-var button=document.querySelector(".hamburgerButton");
-var div=document.querySelector(".hamburgerBar");
+var button = document.querySelector(".hamburgerButton");
+var div = document.querySelector(".hamburgerBar");
 
-function createNav(){
-  div.innerHTML=`<div class="dimScreen">
+function createNav() {
+    div.innerHTML = `<div class="dimScreen">
   <ul class="Navnavigation ">
 
   <li class="nav-item active">
@@ -41,54 +41,38 @@ function createNav(){
 
 }
 
-function deleteNav(){
-    div.innerHTML="";
+function deleteNav() {
+    div.innerHTML = "";
 }
 
 function clicked(number) {
-  switch(number){
-    case "a4":
-      return fillDiv("a4");
-    case "a6":
-      return fillDiv("a6");
-      case "r8":
-        return fillDiv("r8");
-        case "a7":
-          return fillDiv("a7");
-          case "tt":
-            return fillDiv("tt");
-            case "a8":
-              return fillDiv("a8");
-              default:
-                console.log("nema taj auto")
-
-  }
- }
-
- 
- const objCar={
-  "a4":["Audi A4","https://cdn-rs.audi.at/media/Theme_Banners_Banner_Image_Component/55350-banner-318890-image/dh-1920-918e09/da0935cc/1602487748/1920x600-aa4-l-191004-3-v2-oe.jpg"],
-  "a6":["Audi A6","https://cdn-rs.audi.at/media/Theme_Banners_Banner_Image_Component/48124-banner-259834-image/dh-1920-918e09/9091f5f7/1602489817/audi-galerie-6-oe.jpg"],
-  "r8":["Audi R8","https://cdn-rs.audi.at/media/Theme_Banners_Banner_Image_Component/51838-banner-290650-image/dh-1920-918e09/0b5ca581/1602487519/1920x600-7-oe.jpg"],
-  "a7":["Audi A7","https://cdn-rs.audi.at/media/Theme_Banners_Banner_Image_Component/45971-banner-243697-image/dh-1920-918e09/13b9fe53/1602487531/audi-galerie-5-oe.jpg"],
-  "tt":["Audi TT","https://cdn-rs.audi.at/media/Theme_Banners_Banner_Image_Component/13782-banner-56215-image/dh-1920-918e09/a190c4ff/1602487488/1920x1080_0047_ATT_151004_oe.jpg"],
-  "a8":["Audi A8","https://cdn-rs.audi.at/media/Theme_Banners_Banner_Image_Component/44960-banner-234781-image/dh-1920-918e09/38387bbf/1602486621/1920x1080-inlinemediagallery-aa8-171002-oe.jpg"]
+    return fillDiv(number);
 }
 
-function fillDiv(number){
-  document.querySelector(".borderShow").classList.add("bckColor");
-  document.querySelector(".borderShow").innerHTML=
-  `<img src=${objCar[number][1]} class="animation">
+
+const objCar = {
+    "fh16": ["Volvo FH16", "prizvodi_photos/linked/img.png"],
+    "fh": ["Volvo FH", "prizvodi_photos/linked/img_1.png"],
+    "fmx": ["Volvo FMX", "prizvodi_photos/linked/img_2.png"],
+    "fm": ["Volvo FM", "prizvodi_photos/linked/img_3.png"],
+    "fe": ["Volvo FE", "prizvodi_photos/linked/img_4.png"],
+    "fl": ["Volvo FL", "prizvodi_photos/linked/img_5.png"]
+}
+
+function fillDiv(number) {
+    document.querySelector(".borderShow").classList.add("bckColor");
+    document.querySelector(".borderShow").innerHTML =
+        `<img src=${objCar[number][1]} class="animation">
   <h2 class="positionH2">${objCar[number][0]} </h2><hr>
   <p style="max-width:50vw;">Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis.Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis. Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis.Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis.Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis.<p>
-  <buton class="btn btn-light buyButton" style="min-width:12vw;">Kupi</button>
+  <buton class="btn btn-light buyButton" style="min-width:12vw;"><a href="demo.html">Naruci dostavu ovim kamionom</a></button>
  
   `
 }
 
-function showWorkers(){
-  
-  document.querySelector(".allWorkers").innerHTML=`<table class="table table-dark">
+function showWorkers() {
+
+    document.querySelector(".allWorkers").innerHTML = `<table class="table table-dark">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -101,8 +85,8 @@ function showWorkers(){
     <tbody>
       <tr>
         <th scope="row" ">1</th>
-        <td>Viktor</td>
-        <td>Cvetanovic</td>
+        <td>David</td>
+        <td>Stevanovic</td>
         <td>Sef</td>
         <td><button class="btn btn-light " onclick="tableShow(1)">+</button></td>
       </tr>
@@ -137,64 +121,65 @@ function showWorkers(){
     </tbody>
   </table>`
 }
-const allWorkers=["Viktor Cvetanovic","Milan Milanovic","Petar Petrovic","Nikola Petrovic","Dejan Milovanovic"]
 
-function tableShow(number){
-  switch(number){
-    case 1:
-      oneWorker("Viktor Cvetanovic");
-      break;
-      case 2:
-        oneWorker("Milan Milanovic");
-        break;
+const allWorkers = ["David Stevanovic", "Milan Milanovic", "Petar Petrovic", "Nikola Petrovic", "Dejan Milovanovic"]
+
+function tableShow(number) {
+    switch (number) {
+        case 1:
+            oneWorker("David Stevanovic");
+            break;
+        case 2:
+            oneWorker("Milan Milanovic");
+            break;
         case 3:
-          oneWorker("Petar Petrovic");
-          break;
-          case 4:
+            oneWorker("Petar Petrovic");
+            break;
+        case 4:
             oneWorker("Nikola Petrovic");
             break;
-            case 5:
-              oneWorker("Dejan Milovanovic");
-              break;
-              default:
-                oneWorker("Ne postoji taj radnik")
-  }
-}
-
-function searchForWorker(){
-  var a=0;
-  var worker=  document.querySelector(".searchWorkers").value;
-  for(let i=0;i<allWorkers.length;i++){
-    if(allWorkers[i]===worker){
-      oneWorker(worker);
-      a=1;
+        case 5:
+            oneWorker("Dejan Milovanovic");
+            break;
+        default:
+            oneWorker("Ne postoji taj radnik")
     }
-  }
-  if(a==0){
-    alert("Ne postoji takav radnik")
-  }
 }
 
-function oneWorker(name){
-  document.querySelector(".allWorkers").innerHTML=`
+function searchForWorker() {
+    var a = 0;
+    var worker = document.querySelector(".searchWorkers").value;
+    for (let i = 0; i < allWorkers.length; i++) {
+        if (allWorkers[i] === worker) {
+            oneWorker(worker);
+            a = 1;
+        }
+    }
+    if (a === 0) {
+        alert("Ne postoji takav radnik")
+    }
+}
+
+function oneWorker(name) {
+    document.querySelector(".allWorkers").innerHTML = `
   <b><p style="font-size:20px">Ime ovog radnika je ${name}<p></b>
   <p style="max-width:50vw;">Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis.Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis. Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis.Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis.Praesent fringilla ipsum et massa vulputate, eu rutrum tortor scelerisque. Praesent lobortis ligula at imperdiet iaculis. Sed rutrum dui id velit posuere sagittis.<p>
   `
 }
 
-function showAllJobs(){
-    document.querySelector(".addJob").innerHTML =`<div class="showJobs">
+function showAllJobs() {
+    document.querySelector(".addJob").innerHTML = `<div class="showJobs">
     <h3> Ovo su trenutni poslovi</h3> 
     <div style="margin-top:3rem">
-    <img src="jobPhoto.png">
+    <img src="zaposleni_photos/jobPhoto.png">
     <h5>Automehanicar </h5>
     <p style="max-width:40vw"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu lacus vitae orci tempus placerat. In at leo sit amet elit scelerisque bibendum ut non nibh. Suspendisse interdum, urna at ullamcorper rhoncus, quam urna eleifend elit, eu lobortis libero quam at odio</p>
 
-    <img src="jobPhoto.png">
+    <img src="zaposleni_photos/jobPhoto.png">
     <h5>It menadzer </h5>
     <p style="max-width:40vw"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu lacus vitae orci tempus placerat. In at leo sit amet elit scelerisque bibendum ut non nibh. Suspendisse interdum, urna at ullamcorper rhoncus, quam urna eleifend elit, eu lobortis libero quam at odio</p>
 
-    <img src="jobPhoto.png">
+    <img src="zaposleni_photos/jobPhoto.png">
     <h5>Marketing </h5>
     <p style="max-width:40vw"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu lacus vitae orci tempus placerat. In at leo sit amet elit scelerisque bibendum ut non nibh. Suspendisse interdum, urna at ullamcorper rhoncus, quam urna eleifend elit, eu lobortis libero quam at odio</p>
 
@@ -209,97 +194,109 @@ function showAllJobs(){
   <input type="file" ><br><br>
   <button class="btn btn-light" onclick="getEmployeeInput()"> Posalji</button>
     </div>`
-    document.querySelector(".afterJobDiv").innerHTML=`  <h2 class="h2align" style="margin-top: 5rem;">Vas Audi</h1>
+    document.querySelector(".afterJobDiv").innerHTML = `  <h2 class="h2align" style="margin-top: 5rem;">Vas DSD-Transport</h1>
     </br>
 
     `
 }
 
-function getEmployeeInput(){
-  const array=[];
-  var first=document.querySelector(".employee1").value;
-  var second=document.querySelector(".employee2").value;
-  if(first.length>3 && second.length>5){
-    alert("Uspesno ste poslali CV")
-    array.push(first);
-    array.push(second);
-  }else{
-    alert("Uneli ste pogresne podatke")
-  }
+function getEmployeeInput() {
+    const array = [];
+    var first = document.querySelector(".employee1").value;
+    var second = document.querySelector(".employee2").value;
+    if (first.length > 3 && second.length > 5) {
+        alert("Uspesno ste poslali CV")
+        array.push(first);
+        array.push(second);
+    } else {
+        alert("Uneli ste pogresne podatke")
+    }
 }
 
 
-function getListInput(){
-var array =   document.getElementById("my-form").elements;
-
-if(array[0].value.includes(" ") || hasNumbers(array[0].value) || array[1].value.includes(" ") || hasNumbers(array[1].value)){
-  alert("Ime i prezime moraju biti jedna rec i bez razmaka")
-}else if(array[3].value.length>200 || array[3].value.length<10 ){
-  alert("Min unos je 10 reci, a max unos je 200 reci")
-  
+function getListInput() {
+    var array = document.getElementById("my-form").elements;
+    if (array[0].value.includes(" ") || hasNumbers(array[0].value) || array[1].value.includes(" ") || hasNumbers(array[1].value)) {
+        alert("Ime i prezime moraju biti jedna rec i bez razmaka")
+    } else if (array[3].value.length > 200 || array[3].value.length < 10) {
+        alert("Min unos je 10 reci, a max unos je 200 reci")
+    }else {
+        alert("Uspesno uneto")
+    }
 
 
 }
+
+function addMap() {
+    mapboxgl.accessToken = 'pk.eyJ1IjoidmlrdG9yY3ZldGFub3ZpYyIsImEiOiJja2oyNDM2c3A1MHNjMnFsYnZodmx1Mmh6In0.HcWpNazoTdm1XK690ZVErQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11'
+    });
 }
 
-function addMap(){
-mapboxgl.accessToken = 'pk.eyJ1IjoidmlrdG9yY3ZldGFub3ZpYyIsImEiOiJja2oyNDM2c3A1MHNjMnFsYnZodmx1Mmh6In0.HcWpNazoTdm1XK690ZVErQ';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11'
-});}
+function hasNumbers(t) {
+    var regex = /\d/g;
+    return regex.test(t);
+}
 
-function hasNumbers(t)
-{
-var regex = /\d/g;
-return regex.test(t);
-}    
+function showPrice() {
+    var element = document.querySelectorAll(".selectModel");
+    var packet = 0;
+    var preuzimanje = 0;
+    var cenaTezine = 0;
+    var cena = 0;
+    if (element[2].value === "FULL") {
+        packet = 5000;
+    } else {
+        packet = 2000;
+    }
+    if (element[3].value === "DOSTAVA") {
+        preuzimanje = 1000;
+    } else {
+        preuzimanje = 2000;
+    }
 
-function showPrice(){
-  var element=document.querySelectorAll(".selectModel");
-  var packet=0;
-  var preuzimanje=0;
-  var brRata=element[1].value;
-  var cena=0;
-  if(element[2].value==="FULL"){
-    packet=5000;
-  }else{
-    packet=2000;
-  }
-  if(element[3].value==="LICNO"){
-    preuzimanje=1000;
-  }else{
-    preuzimanje=2000;
-  }
-  
-  switch(element[0].value){
-    case "A4":
-      cena=40000;
-      break;
-      case "A6":
-        cena=60000;
-        break;
-        case "A7":
-          cena=70000;
-          break;
-          case "A8":
-            cena=100000;
+    switch (element[0].value) {
+        case "FH16":
+            cena = 4000;
             break;
-            case "TT":
-              cena=120000;
-              break;
-              case "R8":
-                cena=220000;
-                break;
+        case "FH":
+            cena = 6000;
+            break;
+        case "FMX":
+            cena = 7000;
+            break;
+        case "FM":
+            cena = 10000;
+            break;
+        case "FE":
+            cena = 12000;
+            break;
+        case "FL":
+            cena = 22000;
+            break;
+    }
+    switch (element[1].value) {
+        case ">1":
+            cenaTezine = 1000;
+            break
+        case ">2":
+            cenaTezine = 2000;
+            break;
+        case ">4":
+            cenaTezine = 3500;
+            break;
+        case ">8":
+            cenaTezine = 6500;
+            break;
+    }
 
-      
-  }
-
-  createPrice(Math.round((cena+preuzimanje+packet)/brRata));
+    createPrice(Math.round(cena + preuzimanje + packet + cenaTezine));
 }
 
-function createPrice(price){
-  document.querySelector(".prikazCene").innerHTML=`<h2 class="h2align">Vasa mesecna rata automobila je </h2>
+function createPrice(price) {
+    document.querySelector(".prikazCene").innerHTML = `<h2 class="h2align"> Cena dostave je </h2>
   <p>${price}$ </p>
   `
 }

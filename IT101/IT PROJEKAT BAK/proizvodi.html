@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSD-Transport</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png"/>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand " href="index.html">DSD-Transport
+        <img src="logo.png" height="50" alt="logo">
+    </a>
+    <ul class="navbar-nav mr-auto navigation ">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Pocetna</a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="oKompaniji.html">O kompaniji </a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="proizvodi.html">Proizvodi </a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="zaposleni.html">O nama </a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="karijere.html">Karijere</a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="kontakt.html">Kontakt </a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="demo.html">Demo </a>
+        </li>
+    </ul>
+    <button class="navbar-toggler hamburgerButton" type="button" onclick="createNav();">
+        <span class="navbar-toggler-icon" class="closeSpan"></span>
+    </button>
+</nav>
+<div class="hamburgerBar"></div>
+<div class="mainDiv">
+    <img src="prizvodi_photos/bckslika.png" class="backgroundIMG img-fluid ">
+    <div class="products">
+        <div class="photos">
+            <a href="#scrollhere"><img src="prizvodi_photos/slika1.png" class="carModel"
+                                       onmousedown="clicked('fh16')"></a>
+            <a href="#scrollhere"> <img src="prizvodi_photos/slika2.png" class="carModel"
+                                        onmousedown="clicked('fh')"></a>
+            <a href="#scrollhere"> <img src="prizvodi_photos/slika3.png" class="carModel"
+                                        onmousedown="clicked('fm')"></a>
+            <a href="#scrollhere"> <img src="prizvodi_photos/slika4.png" class="carModel"
+                                        onmousedown="clicked('fe')"></a>
+            <a href="#scrollhere"> <img src="prizvodi_photos/slika5.png" class="carModel"
+                                        onmousedown="clicked('fl')"></a>
+            <a href="#scrollhere"> <img src="prizvodi_photos/slika6.png" class="carModel"
+                                        onmousedown="clicked('fmx')"></a>
+            <div class="borderShow" id="scrollhere"></div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">Footer Sadrzaj</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum quis augue eu malesuada.
+                        Suspendisse ac nibh tincidunt risus eleifend scelerisque. Sed at pellentesque tortor. Nunc quis
+                        augue felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque aliquam
+                        leo ut ipsum imperdiet, sed eleifend arcu sodales. Sed efficitur leo mi, id dignissim turpis
+                        aliquet a.</p>
+
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3 ">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Linkovi</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html">Pocetna</a>
+                        </li>
+                        <li>
+                            <a href="proizvodi.html">Proizvodi</a>
+                        </li>
+                        <li>
+                            <a href="oKompaniji.html">O nama</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+            <span> David Stevanovic SI</span>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+</div>
+<!-- Footer -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+<script src="myscripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+</body>
+</html>
