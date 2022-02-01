@@ -1,8 +1,9 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     12/20/2021 11:05:33 PM                       */
+/* Created on:     2/1/2022 11:28:17 PM                         */
 /*==============================================================*/
-
+CREATE database projekat;
+USE projekat;
 
 drop table if exists intervju;
 
@@ -26,7 +27,6 @@ drop table if exists vlasnik;
 create table intervju
 (
    intervju_id          int not null,
-   profil_oglas_id      int not null,
    mesto                varchar(1024),
    vreme                date,
    primary key (intervju_id)
@@ -37,16 +37,11 @@ create table intervju
 /*==============================================================*/
 create table kandidat
 (
-   osoba_id             int not null,
    profil_id            int not null,
-   ime                  varchar(1024),
-   prezime              varchar(1024),
-   pol                  varchar(1024),
-   godina_rodjenja      date,
-   mesto                varchar(1024),
+   osoba_id             int not null,
    korisnicko_ime       varchar(1024),
    sifra                varchar(1024),
-   primary key (osoba_id, profil_id)
+   primary key (profil_id)
 );
 
 /*==============================================================*/
@@ -56,8 +51,8 @@ create table kandidat_oglas
 (
    profil_oglas_id      int not null,
    oglas_id             int,
-   osoba_id             int,
    profil_id            int,
+   intervju_id          int not null,
    datum                date,
    primary key (profil_oglas_id)
 );
@@ -67,12 +62,11 @@ create table kandidat_oglas
 /*==============================================================*/
 create table kompanija
 (
-   osoba_id             int not null,
    vlasnik_id           int not null,
    kompanija_id         int not null,
    naziv                varchar(1024),
    grad                 varchar(1024),
-   primary key (osoba_id, vlasnik_id, kompanija_id)
+   primary key (vlasnik_id, kompanija_id)
 );
 
 /*==============================================================*/
@@ -81,7 +75,6 @@ create table kompanija
 create table kontakt
 (
    kontakt_id           int not null,
-   kom_osoba_id         int,
    vlasnik_id           int,
    kompanija_id         int,
    osoba_id             int,
@@ -96,7 +89,6 @@ create table kontakt
 create table oglas
 (
    oglas_id             int not null,
-   osoba_id             int,
    vlasnik_id           int,
    kompanija_id         int,
    naziv_pozicije       varchar(1024),
@@ -125,40 +117,36 @@ create table osoba
 /*==============================================================*/
 create table vlasnik
 (
-   osoba_id             int not null,
-   ime                  varchar(1024),
-   prezime              varchar(1024),
-   pol                  varchar(1024),
-   godina_rodjenja      date,
-   mesto                varchar(1024),
    vlasnik_id           int not null,
-   primary key (osoba_id, vlasnik_id)
+   kompanija_id         int not null,
+   osoba_id             int not null,
+   primary key (vlasnik_id)
 );
 
-alter table intervju add constraint fk_relationship_9 foreign key (profil_oglas_id)
-      references kandidat_oglas (profil_oglas_id) on delete restrict on update restrict;
-
-alter table kandidat add constraint fk_inheritance2 foreign key (osoba_id)
+alter table kandidat add constraint fk_relationship_10 foreign key (osoba_id)
       references osoba (osoba_id) on delete restrict on update restrict;
 
 alter table kandidat_oglas add constraint fk_relationship_5 foreign key (oglas_id)
       references oglas (oglas_id) on delete restrict on update restrict;
 
-alter table kandidat_oglas add constraint fk_relationship_6 foreign key (osoba_id, profil_id)
-      references kandidat (osoba_id, profil_id) on delete restrict on update restrict;
+alter table kandidat_oglas add constraint fk_relationship_6 foreign key (profil_id)
+      references kandidat (profil_id) on delete restrict on update restrict;
 
-alter table kompanija add constraint fk_is foreign key (osoba_id, vlasnik_id)
-      references vlasnik (osoba_id, vlasnik_id) on delete restrict on update restrict;
+alter table kandidat_oglas add constraint fk_relationship_7 foreign key (intervju_id)
+      references intervju (intervju_id) on delete restrict on update restrict;
 
-alter table kontakt add constraint fk_contains foreign key (kom_osoba_id, vlasnik_id, kompanija_id)
-      references kompanija (osoba_id, vlasnik_id, kompanija_id) on delete restrict on update restrict;
+alter table kontakt add constraint fk_contains foreign key (vlasnik_id, kompanija_id)
+      references kompanija (vlasnik_id, kompanija_id) on delete restrict on update restrict;
 
 alter table kontakt add constraint fk_relationship_8 foreign key (osoba_id)
       references osoba (osoba_id) on delete restrict on update restrict;
 
-alter table oglas add constraint fk_post foreign key (osoba_id, vlasnik_id, kompanija_id)
-      references kompanija (osoba_id, vlasnik_id, kompanija_id) on delete restrict on update restrict;
+alter table oglas add constraint fk_post foreign key (vlasnik_id, kompanija_id)
+      references kompanija (vlasnik_id, kompanija_id) on delete restrict on update restrict;
 
-alter table vlasnik add constraint fk_inheritance foreign key (osoba_id)
+alter table vlasnik add constraint fk_is2 foreign key (vlasnik_id, kompanija_id)
+      references kompanija (vlasnik_id, kompanija_id) on delete restrict on update restrict;
+
+alter table vlasnik add constraint fk_relationship_9 foreign key (osoba_id)
       references osoba (osoba_id) on delete restrict on update restrict;
 

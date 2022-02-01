@@ -2,17 +2,17 @@
 
 # 1.
 select *
-from company c
-         join ad a on c.company_id = a.company_fk
-where a.work_type = 'JUNIOR';
+from kompanija c
+         join oglas a ON c.kompanija_id = a.kompanija_id
+where a.tip_posla = 'JUNIOR';
 
 # 2.
 select i.*,
        c.*
-from interview i
-         join ad_candidate ac on i.interview_id = ac.interview_fk
-         join candidate c on c.candidate_id = ac.candidate_fk
-where ac.date like '2020-05-%';
+from intervju i
+         join kandidat_oglas ac on i.intervju_id = ac.intervju_fk
+         join kandidat c on c.kandidat_id = ac.kandidat_fk
+where ac.datum like '2020-05-%';
 
 # 3.
 select max(ad_id)
