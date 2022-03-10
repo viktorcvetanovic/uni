@@ -28,9 +28,10 @@ from candidate c
          join person p on p.person_id = c.person_fk
          join contact c2 on c2.contact_id = p.contact_fk
 where c2.contact_type = 'ADDRESS'
-order by p.date_of_birth;
+order by p.date_of_birth desc;
 
-# 5. sediste Srbija fali negde nekako
+# 5. select v.* from vlasnik v
+join kompanija k on v.kompanij 
 
 # 6.
 select c.name,
