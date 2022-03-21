@@ -1,0 +1,4 @@
+Otvoriti browser - win + (ime browser-a)
+Kucati u pretrazi - ctrl + k
+Otvoriti novu stranu - ctrl + t
+Otvoriti potreban prozor unutar strane - Tab + Enter
