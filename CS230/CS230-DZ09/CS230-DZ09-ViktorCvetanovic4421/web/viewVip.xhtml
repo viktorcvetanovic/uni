@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>DZ09</title>
+    </h:head>
+    <h:body>
+        <h2>Prikaz kreiranog putnika:</h2>
+        <h:panelGrid columns="2" border="4" class="vipPrikaz">
+            <h:outputLabel for="firstName" value="FirstName"/>
+            <h:outputText id="firstName" value="#{vip.firstName}"/>
+            <h:outputLabel for="lastName" value="Last name"/>
+            <h:outputText id="lastName" value="#{vip.lastName}"/>
+            <h:outputLabel for="jmbg" value="Jmbg"/>
+            <h:outputText id="jmbg" value="#{vip.jmbg}"/>
+            <h:outputLabel for="cardNum" value="Card number"/>
+            <h:outputText id="cardNum" value="#{vip.cardNum}"/>
+            <h:outputLabel for="flightNum" value="Flight number"/>
+            <h:outputText id="flightNum" value="#{vip.flightNum}"/>
+            <h:outputLabel for="placeNum" value="Place number"/>
+            <h:outputText id="placeNum" value="#{vip.placeNum}"/>
+            <h:outputLabel for="menu" value="Menu"/>
+            <h:outputText id="menu" value="#{vip.menu}"/>
+        </h:panelGrid>
+    </h:body>
+</html>
+
