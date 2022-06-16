@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Input Data</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel for="name" value="Name"/>
+                <h:inputText id="name" value="#{beanCDI.name}"/>
+                <h:outputLabel for="role" value="Role"/>
+                <h:inputText id="role" value="#{beanCDI.role}"/>
+                <h:outputLabel for="status" value="Status"/>
+                <h:inputText id="status" value="#{beanCDI.status}"/>
+                <h:outputLabel for="traditional" value="Traditional(true/false)"/>
+                <h:inputText id="traditional" value="#{beanCDI.traditional}"/>
+                <h:outputLabel for="index" value="Index"/>
+                <h:inputText id="index" value="#{beanCDI.index}"/>
+                <h:outputLabel for="contact" value="Contact"/>
+                <h:inputText id="contact" value="#{beanCDI.contact}"/>
+                <h:outputLabel for="city" value="City"/>
+                <h:inputText id="city" value="#{beanCDI.city}"/>
+                <h:outputLabel for="postalCode" value="Postal code"/>
+                <h:inputText id="postalCode" value="#{beanCDI.postalCode}"/>
+                <h:outputLabel for="address" value="Address"/>
+                <h:inputText id="address" value="#{beanCDI.address}"/>
+                <h:panelGrid/>
+                <h:commandButton value="View JSON"
+                                 action="#{jsonBean.generateJson()}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
