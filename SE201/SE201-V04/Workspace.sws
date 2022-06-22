@@ -4,7 +4,7 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{142DE056-4E74-45D1-B694-80DB6F6DD4A2}" Name="SE211-Projekat" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="/uni/SE211/SE211-Projekat/SE211-Projekat.prj"/>
+		<Model Expanded="Yes" ID="{ED2AB7EF-B3ED-4837-95EC-BF29D4EE7E33}" Name="SE211-PZ" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="file:///C|/Users/vikto/OneDrive/Desktop/SE211-PZ-ViktorPesic/SE211-PZ.prj"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
