@@ -40,3 +40,4 @@ __pycache__
 # Visaul Paradigm backup files
 *.vpp.bak_????
 *.vpp.lck
+/CS230/Ispit CS230/CS230April/nbproject/private/

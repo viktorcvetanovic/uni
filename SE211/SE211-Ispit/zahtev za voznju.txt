@@ -1,0 +1,16 @@
+FUNKCIJA dodajZahtev(k)
+ULAZ korisnik k
+IZLAZ void
+BEGIN
+IF korisnik.kartica = null
+throw Exception
+ENDIF
+if korisnik.kartica.novac < izracunajCenu()
+throw Expcetion
+ENDIF
+ZahtevDaO zahtevDao:= new ZahtevDao();
+Zahtev zahtev:= new Zahtev();
+zahtev.setKorisnik(k);
+zahtev.setVozac(findVozac());
+zahtevDao.save(zahtev);
+END
