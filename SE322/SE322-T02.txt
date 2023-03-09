@@ -1,0 +1,27 @@
+SE322-T02:
+Kako identifikovati i klasifikovati korisnike softvera?
+Koja je uloga šampiona proizvoda?
+Koje su zamke šampiona proizvoda koje treba izbegavati?
+Objasnite ulogu vlasnika proizvoda.
+Ko rešava problem sukobljenih zahteva?
+Opišite cikličan način razvoja zahteva.
+Objasnite intervju kao tehniku za utvrđivanje zahteva.
+Objasnite fokus grupu kao tehniku za utvrđivanje zahteva.
+Objasnite upitnik kao tehniku za utvrđivanje zahteva.
+Objasnite analizu interfejsa sistema kao tehniku za utvrđivanje zahteva.
+Objasnite radionice kao tehniku za utvrđivanje zahteva.
+Koje su preporuke za planiranje izazivanja zahteva? Kako se pripremiti za aktivnost izazivanja zahteva?
+Šta treba uraditi posle sesije prikupljanja zahteva?
+Kako klasifikovati informacije dobijene od kupca posle aktivnosti prikupljanja zahteva?
+Kako znate da ste završili sa utvrđivanjem zahteva?
+Koji se problemi javljaju uzrokovani pretpostavljenim i podrazumevanim zahtevima? Kako naći zahteve koji nedostaju?
+Objasnite primenu slučajeva korišćenja i korisničkih priča.
+"Uporedite slučajeve korišćenja i korisničke priče. Koje su razlike, a koje su zajedničke karakteristike?"
+Šta su scenariji korišćenja i u kakvoj su vezi sa slučajevima korišćenja?
+Šta se opisuje preduslovima i postuslovima slučajeva korišćenja?
+"Šta se opisuje normalnim tokom slučaja korišćenja, šta alternativnim tokom i izuzetkom?"
+Objasnite vezu između slučajeva korišćenja i poslovnih pravila.
+Dajte preporuke za utvrđivanje slučajeva korišćenja.
+Objasnite vezu između slučajeva korišćenja i funkcionalnih zahteva.
+Koje su zamke pri radu sa slučajevima korišćenja?
+"Prednosti korišćenja zahteva koncentrisanih na korisnika, umesto onih koji su koncentrisani na sistem?"

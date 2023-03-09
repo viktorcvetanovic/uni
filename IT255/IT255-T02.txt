@@ -1,0 +1,49 @@
+"Prilikom definisanja objekata moguće je postupiti po scenariju:
+"," kreirati niz parova (ključ, vrednost) unutar zagrada {...}.",0.5
+"Prilikom definisanja objekata moguće je postupiti po scenariju:
+", kreiranje objekata primenom konstruktora,0.5
+Šta je od navedenog moguće raditi sa JS objektima?, Moguće je naknadno dodavanje novih osobina objekata; ,0.5
+Šta je od navedenog moguće raditi sa JS objektima?, Moguće je naknadno brisanje postojećih  osobina objekata; ,0.5
+"<div>šta je tačno za dodele naziva promenljivim i objektnim osobinama?</div>
+",<div>JS promenljive ne mogu da imaju nazive koji odgovaraju rezervisanim rečima jezika</div>,0.5
+"<div>šta je tačno za dodele naziva promenljivim i objektnim osobinama?</div>
+",<div>Osobina objekata mogu da imaju nazive koji odgovaraju rezervisanim rečima jezika</div>,0.5
+JavaScript podržava rad sa promenljivom listom argumenata za:, za kreirane funkcije,0.5
+JavaScript podržava rad sa promenljivom listom argumenata za:, brojne ugrađene funkcije,0.5
+"<div>Objektna osobina, pored vrednosti (value) može da poseduje i neku od sledećih oznaka:</div>
+",<div>writable</div>,0.33333
+"<div>Objektna osobina, pored vrednosti (value) može da poseduje i neku od sledećih oznaka:</div>
+",<div>enumerable</div>,0.33333
+"<div>Objektna osobina, pored vrednosti (value) može da poseduje i neku od sledećih oznaka:</div>
+",<div>configurable</div>,0.33333
+Po osnovnim podešavanjima:, Glavna Angular komponenta dodaje svoj šablon u index.html,0.333
+Po osnovnim podešavanjima:, Glavna Angular komponenta dodaje svoj tag app-root u index.html,0.333
+Po osnovnim podešavanjima:, tag app-root je ulazna tačka Angular aplikacije,0.333
+"Prilikom kreiranja komponente, primenom Angular CLI, šta je tačno od navedenog?", Komponenta je automatski importovana i registrovana u glavnom modulu aplikacije,0.5
+"Prilikom kreiranja komponente, primenom Angular CLI, šta je tačno od navedenog?", Automatski su kreirani šablon i klasa komponente,0.5
+Šta je tačno za klasu komponente?, Obeležena je dekoratorom Component,0.333
+Šta je tačno za klasu komponente?, Implementira interfejs OnInit,0.333
+Šta je tačno za klasu komponente?, Poseduje tačno jedan konstruktor,0.333
+Šta je tačno za dekorator komponente?, poseduje ključ selector za određivanje taga komponente,0.5
+Šta je tačno za dekorator komponente?, poseduje ključ template ili templateURL za definisanje šablona komponente,0.5
+Kako se dodaju zavisnosti u klasu komponente?, iskazom import,1
+Šta je od navedenog tačno?," TypeScipt je čist JavaScript proširen anotacijama i tipovima podataka, koristi klase i module",1
+"TypeScript donosi pet velikih unapređenja u odnosu na čist JavaScript:
+", podrška za tipove podataka; ,0.333
+"TypeScript donosi pet velikih unapređenja u odnosu na čist JavaScript:
+", podrška za klase; ,0.333
+"TypeScript donosi pet velikih unapređenja u odnosu na čist JavaScript:
+", primena dekoratora; ,0.333
+Šta je od navedenog tačno?, Tip podataka any označava univerzalni i podrazumevani tip podataka. ,0.5
+Šta je od navedenog tačno?, Promenljiva obeležena any tipom podataka može da primi bilo koju vrednost,0.5
+
+////////////////////
+
+"Kod promenljive liste argumenata, u JS funkcijama, promenljivi deo se nalazi na kraju liste argumenata?",1
+Mehanizam koji omogućava izgradnju novog objekta na vrhu postojećeg je prototipsko nasleđivanje?,1
+"Izrazom {{title}} iz HTML šablona komponente učitava se vrednost this.title iz klase posmatrane komponente, da ili ne? ",1
+"TypeScript proverava kompatibilnost tipova podataka tokom vremena prevođenja programa, da ili ne?
+",1
+"Ako TypeScript metoda ne poseduje naredbu return, a ima povratni tip any, povratni tip će automatski biti interpretiran kao void?",1
+TypeScript klase dozvoljavju primenu koncepta nasleđivanja?,1
+
