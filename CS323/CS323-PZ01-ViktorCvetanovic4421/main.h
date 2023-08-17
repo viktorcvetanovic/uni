@@ -15,4 +15,7 @@ typedef struct Valute{
 void updateAccountBalance(const char *accountNumber, double newBalance);
 valute readJsonByParameter(char* parameter);
 void readStringInput(char* stringToPrint, char* input);
-void readIntInput(char* stringToPrint, int* input);
+int readIntInput(char* stringToPrint);
+void createNewAccount(const char *accountNumber, double initialBalance, const char *accountType);
+int doesAccountExist(const char *accountNumber);
+int validateAccountNumber(const char *accountNumber);
