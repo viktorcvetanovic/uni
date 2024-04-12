@@ -1,0 +1,60 @@
+<div *ngIf="action === 'Point'">
+  <h1 class="appointment-view">View appointment</h1>
+  <div class="calendar-dialog">
+    <mat-form-field class="full-width start">
+      <mat-label>Prijava</mat-label>
+      <input [value]="dateTime?.startTime" matInput readonly type="time">
+    </mat-form-field>
+    <span>
+      -
+    </span>
+    <mat-form-field class="full-width end">
+      <mat-label>Odjava</mat-label>
+      <input [value]="dateTime?.endTime" matInput readonly type="time">
+    </mat-form-field>
+    <br>
+  </div>
+</div>
+
+<div *ngIf="action === 'Day'">
+  <h1 class="dialog-text" tabindex="0">View appointment for the selected day</h1>
+  <h3 *ngIf="appointmentList.length === 0" class="error-cell">For selected day hasn't appointment.</h3>
+  <div *ngFor="let appointment of appointmentList" class="calendar-dialog">
+    <mat-form-field class="full-width start">
+      <mat-label>Start</mat-label>
+      <input [value]="appointment?.startTime" matInput readonly type="time"
+             [disabled]="appointment?.status === 'ORDERED'">
+    </mat-form-field>
+    <span>
+      -
+    </span>
+    <mat-form-field class="full-width end">
+      <mat-label>End</mat-label>
+      <input [value]="appointment?.endTime" matInput readonly type="time"
+             [disabled]="appointment?.status === 'ORDERED'">
+    </mat-form-field>
+    <mat-icon *ngIf="appointment?.status === 'CANCELED' || appointment?.status === 'CREATED'" color="primary" class="check-icon"
+              (click)="scheduleAppointment(appointment)">done_all
+    </mat-icon>
+    <mat-icon *ngIf="appointment?.status === 'ORDERED'" color="warn" class="check-icon">alarm_off</mat-icon>
+    <br>
+  </div>
+  <h1 class="dialog-text" tabindex="0">My appointment for the selected day</h1>
+  <h3 *ngIf="appointmentListStatusIsNull.length === 0" class="error-cell">For selected day hasn't appointment.</h3>
+  <div *ngFor="let appointmentSchedule of appointmentListStatusIsNull" class="calendar-dialog">
+    <mat-form-field class="full-width start">
+      <mat-label>Start</mat-label>
+      <input [value]="appointmentSchedule?.appointment?.startTime" matInput readonly
+             type="time">
+    </mat-form-field>
+    <span>
+      -
+    </span>
+    <mat-form-field class="full-width end">
+      <mat-label>End</mat-label>
+      <input [value]="appointmentSchedule?.appointment?.endTime" matInput readonly
+             type="time">
+    </mat-form-field>
+    <mat-icon color="warn" class="check-icon" (click)="deleteScheduleAppointment(appointmentSchedule)">close</mat-icon>
+  </div>
+</div>

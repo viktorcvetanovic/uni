@@ -1,0 +1,43 @@
+<div *ngIf="isAdmin" class="wrapper-feed">
+  <div *ngFor="let item of items">
+    <mat-card #newsItem>
+      <mat-card-content>
+        <p class="appointment-bold">{{item?.appointment?.date | date: "dd.MM.yyyy."}}
+          <mat-icon class="appointment-icon" *ngIf="item?.status === 'ACCEPTED'" [matTooltip]="item?.status!">done_all
+          </mat-icon>
+          <mat-icon class="appointment-icon" *ngIf="item?.status === 'CANCELED'" [matTooltip]="item?.status!">close
+          </mat-icon>
+          <mat-icon class="appointment-icon" *ngIf="item?.status === 'PAID'" [matTooltip]="item?.status!">paid
+          </mat-icon>
+        </p>
+        <p>{{item?.appointment?.startTime}} - {{item?.appointment?.endTime}}
+          <mat-icon class="appointment-icon" color="warn" [matTooltip]="'ACCEPTED'"
+                    (click)="changeStatus(item, 'ACCEPTED')">done_all
+          </mat-icon>
+          <mat-icon class="appointment-icon" color="warn" [matTooltip]="'CANCELED'"
+                    (click)="changeStatus(item,'CANCELED')">close
+          </mat-icon>
+          <mat-icon class="appointment-icon" color="warn" [matTooltip]="'PAID'" (click)="changeStatus(item, 'PAID')">
+            paid
+          </mat-icon>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<cdk-virtual-scroll-viewport itemSize="100" class="newsFeed-container" (mouseleave)="startNewsFeed()"
+                             (mouseenter)="stopNewsFeed()" *ngIf="!isAdmin">
+  <div *cdkVirtualFor="let item of items">
+    <mat-card #newsItem>
+      <mat-card-content>
+        <p class="appointment-bold">{{item?.appointment?.date | date: "dd.MM.yyyy."}}</p>
+        <p>{{item?.appointment?.startTime}} - {{item?.appointment?.endTime}}
+          <mat-icon class="appointment-icon" *ngIf="item?.status === 'ACCEPTED'" color="warn">done_all</mat-icon>
+          <mat-icon class="appointment-icon" *ngIf="item?.status === 'CANCELED'" color="warn">close</mat-icon>
+          <mat-icon class="appointment-icon" *ngIf="item?.status === 'PAID'" color="warn">paid</mat-icon>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</cdk-virtual-scroll-viewport>

@@ -1,0 +1,36 @@
+<mat-sidenav-container class="sidebar-container">
+  <mat-sidenav #sidenav autosize [(opened)]="opened" [mode]="modeValue">
+    <mat-list id="menu">
+      <div routerLink="/home" class="sidebar-logo" [ngClass]="(!showSidebarText?'small':'')">
+        <h2 class="logo-text">Serengeti</h2>
+      </div>
+      <mat-list-item *ngFor="let link of links"
+                     [ngClass]="{'active': router.url === link.path}"
+                     [routerLink]="link?.path">
+        <mat-icon mat-list-icon>{{link?.icon}}</mat-icon>
+        <h4 *ngIf="showSidebarText" mat-line>{{link?.title}}</h4>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-slide-toggle mat-line color="primary" [(ngModel)]="showSidebarText" (ngModelChange)="triggerResizeEvent()">
+          <span *ngIf="showSidebarText" class="theme-control-text">Zamrzni meni</span>
+        </mat-slide-toggle>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item (click)="logout()">
+        <mat-icon mat-list-icon>meeting_room</mat-icon>
+        <h4 *ngIf="showSidebarText" mat-line>Izloguj se</h4>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content (window:resize)="onResize($event)">
+    <div>
+      <ng-content></ng-content>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

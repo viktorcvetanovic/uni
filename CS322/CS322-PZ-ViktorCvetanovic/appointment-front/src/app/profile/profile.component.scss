@@ -1,0 +1,105 @@
+.profileImage {
+  border-radius: 50% !important;
+  max-width: 280px;
+  min-height: 250px;
+}
+
+.info mat-card-actions {
+  margin: 0 !important;
+}
+
+mat-form-field {
+  width: 14em !important;
+  font-size: 1.5em !important;
+}
+
+.details {
+  margin-top: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 26px;
+
+  .newsFeed {
+    margin-left: 2em;
+    width: 100%;
+    max-width: 900px;
+  }
+}
+
+
+.scheduleBtn + .scheduleBtn {
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+.details mat-card {
+  max-width: 25em;
+  border-right: 1px solid;
+  border-image: radial-gradient(gray, rgba(250, 255, 255, 0)) 1;
+  text-align: center;
+
+  mat-card-actions {
+    button {
+      width: 250px;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  mat-form-field {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .details mat-card {
+    border: none;
+  }
+  .newsFeed {
+    height: 35em;
+    margin: 0 auto;
+  }
+  .details {
+    width: 22em;
+  }
+  .mat-card-title {
+    font-size: 1.5em;
+  }
+  .mat-card-subtitle {
+    font-size: 1.25em;
+  }
+  .info {
+    display: contents;
+  }
+  mat-card-actions {
+    margin-bottom: 0.5em !important;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .details {
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .details {
+    display: block;
+    margin-top: 0;
+
+    .mat-card {
+      border: none;
+      margin: 0 auto;
+    }
+  }
+
+  .newsFeed {
+    width: initial !important;
+    height: 600px;
+    margin: 0 2em !important;
+  }
+}
+

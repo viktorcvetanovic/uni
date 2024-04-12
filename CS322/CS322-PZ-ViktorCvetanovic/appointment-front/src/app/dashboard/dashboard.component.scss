@@ -1,0 +1,45 @@
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  width: 95%;
+}
+
+.dashboardTable {
+  margin-top: 1em;
+}
+
+.menuHeader {
+  cursor: default;
+  transition: all .2s ease;
+  text-align: center;
+  margin-top: 15px;
+
+  img {
+    height: 64px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    transition: all 0.5s ease !important;
+  }
+
+  h1 {
+    font-size: 50px;
+    color: #0099ff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #004d80;
+  }
+
+  .mat-icon-button {
+    height: initial !important;
+  }
+
+  & > i {
+    color: #004d80;
+    vertical-align: 0.9em;
+  }
+}
+
+.addBtn {
+  margin-bottom: 1em;
+}
+

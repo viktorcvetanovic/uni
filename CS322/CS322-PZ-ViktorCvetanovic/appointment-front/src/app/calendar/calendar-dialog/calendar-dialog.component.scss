@@ -1,0 +1,47 @@
+.calendar-dialog {
+  margin-right: 2em;
+  margin-left: 2em;
+  user-select: none;
+  text-align: center;
+}
+
+button {
+  color: white;
+  background-color: #125256 !important;
+  margin-left: 75%;
+}
+
+mat-form-field {
+  width: 100px;
+  margin: 0 0.5em;
+  pointer-events: none;
+}
+
+.error-cell {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: red;
+  text-align: center;
+}
+
+.appointment-view {
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.dialog-text {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+*:focus {
+  border: none;
+  outline: none;
+}
+
+.check-icon {
+  cursor: pointer;
+}
+

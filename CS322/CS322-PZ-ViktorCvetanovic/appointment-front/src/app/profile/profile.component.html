@@ -1,0 +1,34 @@
+<!--<mat-progress-bar mode="indeterminate" *ngIf="!user"></mat-progress-bar>-->
+<div class="details">
+  <mat-card class="info">
+    <img mat-card-image
+         [src]="'./assets/img/user-picture.jpg'"
+         class="profileImage" alt="User picture">
+    <!--    <button mat-flat-button>Dodaj sliku</button>-->
+    <mat-card-content>
+      <div>
+        <div>
+          <mat-form-field>
+            <input readonly matInput placeholder="Name" [value]="user?.firstName + ' ' + user?.lastName">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input readonly matInput placeholder="Email" [value]="user?.email">
+          </mat-form-field>
+        </div>
+<!--        <div>-->
+<!--          <mat-form-field>-->
+<!--            <input readonly matInput placeholder="Role" [value]="renderRoleList(user?.roles!)">-->
+<!--          </mat-form-field>-->
+<!--        </div>-->
+      </div>
+      <div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div class="newsFeed">
+    <app-newsfeed></app-newsfeed>
+  </div>
+
+</div>
